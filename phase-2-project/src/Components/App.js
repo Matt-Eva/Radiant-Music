@@ -4,10 +4,7 @@ import '../App.css';
 import Header from "./Header"
 import AddForm from './AddForm';
 import NavBar from './NavBar';
-import Home from './Home';
-import Instruments from './Instruments';
-import Accessories from './Accessories';
-import Albums from './Albums';
+import DisplayContainer from './DisplayContainer';
 
 function App() {
   return (
@@ -17,16 +14,19 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/">
-          <Home />
+          <DisplayContainer />
         </Route>
         <Route exact path="/instruments">
-          <Instruments />
+          <DisplayContainer />
         </Route>
         <Route exact path="/accessories">
-          <Accessories />
+          <DisplayContainer />
         </Route>
         <Route exact path="/albums">
-          <Albums />
+          <DisplayContainer />
+        </Route>
+        <Route>
+          404 Page Does Not Exist
         </Route>
       </Switch>
     </div>

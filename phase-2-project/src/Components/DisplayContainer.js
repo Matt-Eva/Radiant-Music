@@ -2,7 +2,7 @@ import Search from "./Search";
 import MerchDisplay from "./MerchDisplay";
 import SideBar from "./SideBar";
 
-const Instruments = () =>{
+const DisplayContainer = () =>{
     return (
         <>
             <Search />
@@ -12,4 +12,4 @@ const Instruments = () =>{
     )
 }
 
-export default Instruments;
+export default DisplayContainer;

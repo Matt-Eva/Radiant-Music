@@ -3,7 +3,10 @@ const AddForm = () =>{
         <div>
             <form>
                 <input type="text" />
-                <input type="select"/>
+                <label>Main</label>
+                <select type="select"/>
+                <label>Sub</label>
+                <select />
                 <button type="submit">Submit</button>
             </form>
         </div>
