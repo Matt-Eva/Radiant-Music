@@ -1,10 +1,13 @@
 import MerchCard from "./MerchCard";
 
-const MerchDisplay = () =>{
+
+const MerchDisplay = ({displayData}) =>{
+    const merchItems = displayData.map(item => <MerchCard item={item} key={item.title}/>)
+
     return (
-        <>
-        <MerchCard />
-        </>
+        <div className="merch-display">
+            {merchItems}
+        </div>
     )
 }
 
