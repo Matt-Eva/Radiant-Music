@@ -6,8 +6,8 @@ const DisplayContainer = () =>{
     return (
         <>
             <Search />
-            <MerchDisplay />
             <SideBar />
+            <MerchDisplay />
         </>
     )
 }

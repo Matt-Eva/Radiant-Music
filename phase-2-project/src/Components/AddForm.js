@@ -1,6 +1,8 @@
+
+
 const AddForm = () =>{
     return (
-        <div>
+        <div className="addform">
             <form>
                 <input type="text" />
                 <label>Main</label>
