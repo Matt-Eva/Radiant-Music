@@ -95,6 +95,7 @@ body{
   margin: 10px 20px 10px 20px;
   padding: 5px 5px 5px 5px;
   width: 210px;
+  height: 250px;
   border: double;
   border-width: 3px;
   border-radius: 10px;
@@ -108,9 +109,16 @@ body{
   border-color: hsl(180, 50%, 20%);
 }
 
+.merchcard h4{
+  height: 20px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
 .merchcard img{
-  max-width: 100px;
-  max-height: 100px;
+  max-width: 180px;
+  height: 100px;
 }
 
 .add-stock{

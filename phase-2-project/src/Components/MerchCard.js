@@ -1,11 +1,21 @@
 
 
-const MerchCard = () => {
+const MerchCard = ({item}) => {
+    const {title, price, stock, image, type} = item
+
+    // function handleStockChange({item}){
+    //     const {type, stock, id} = item
+    //     fetch(baseUrl + `/${type}/${id}`)
+    // }
+        
+    
+
     return (
         <div className="merchcard">
-            <img src="https://e7.pngegg.com/pngimages/272/208/png-clipart-adventure-time-jake-illustration-jake-the-dog-roblox-finn-the-human-drawing-adventure-time-video-game-smiley.png"/>
-            <h4 style={{margin: "0px"}}>Header</h4>
-            <p>Details/Price</p>
+            <img src={image}/>
+            <h4 style={{margin: "0px"}} title={title}>{title}</h4>
+            <p>${price}</p>
+            <p>Number In Stock: {stock}</p>
             <button>Add to Cart</button>
             <form>
                 <input type="number" className="add-stock"/>

@@ -2,12 +2,12 @@ import Search from "./Search";
 import MerchDisplay from "./MerchDisplay";
 import SideBar from "./SideBar";
 
-const DisplayContainer = () =>{
+const DisplayContainer = ({displayData}) =>{
     return (
         <>
             <Search />
             <SideBar />
-            <MerchDisplay />
+            <MerchDisplay displayData={displayData}/>
         </>
     )
 }
