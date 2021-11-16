@@ -48,7 +48,7 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/">
-          <DisplayContainer displayData={allData} pathName="all"/>
+          <DisplayContainer displayData={allData} pathName="all merch"/>
         </Route>
         <Route exact path="/instruments">
           <DisplayContainer displayData={instruments} pathName="instruments"/>
