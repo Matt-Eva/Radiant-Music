@@ -43,6 +43,7 @@ function App() {
   }
 
   const handleCartAdd = (item) => {
+
     item.stock -= 1
 
     const configObj = {
@@ -56,13 +57,7 @@ function App() {
     fetch(baseUrl + `/${item.id}`, configObj)
     .then(res => res.json())
     .then(data =>{
-      const updatedArray = allData.map(item => {
-        if (data.id === item.id){
-          return data
-        } else {
-          return item
-        }
-      })
+      const updatedArray = allData.map(item => item.id === data.id ? data : item)
       setAllData([...updatedArray])
       setCart([...cart, data])
       alert(`${item.title} added to cart! :)`)

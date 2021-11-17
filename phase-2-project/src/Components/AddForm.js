@@ -82,6 +82,7 @@ const AddForm = ({instruments, accessories, albums, addMerch}) =>{
 
     return (
         <div className="addform">
+            <h3>Add Item:</h3>
             <form onChange={handleChange} onSubmit={(e) =>{
                 addMerch(formData)
                 handleSubmit(e)
