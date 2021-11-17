@@ -9,6 +9,7 @@ import DisplayContainer from './DisplayContainer';
 function App() {
   const baseUrl = "http://localhost:4000/resources";
   const [allData, setAllData] = useState([])
+  const [cart, setCart] = useState([])
   
   const instruments = allData.filter(data => data.type === "instruments")
   const accessories = allData.filter(data => data.type === "accessories")
@@ -41,23 +42,50 @@ function App() {
     })
   }
 
+  const handleCartAdd = (item) => {
+    item.stock -= 1
+
+    const configObj = {
+        method: 'PATCH',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(item)
+    }
+
+    fetch(baseUrl + `/${item.id}`, configObj)
+    .then(res => res.json())
+    .then(data =>{
+      const updatedArray = allData.map(item => {
+        if (data.id === item.id){
+          return data
+        } else {
+          return item
+        }
+      })
+      setAllData([...updatedArray])
+      setCart([...cart, data])
+      alert(`${item.title} added to cart! :)`)
+    })
+}
+
   return (
     <div className="App">
-      <Header />
+      <Header cart={cart}/>
       <AddForm instruments={instruments} accessories={accessories} albums={albums} addMerch={addMerch}/>
       <NavBar />
       <Switch>
         <Route exact path="/">
-          <DisplayContainer displayData={allData} pathName="all"/>
+          <DisplayContainer displayData={allData}  handleCartAdd={handleCartAdd} pathName="all merch"/>
         </Route>
         <Route exact path="/instruments">
-          <DisplayContainer displayData={instruments} pathName="instruments"/>
+          <DisplayContainer displayData={instruments}  handleCartAdd={handleCartAdd} pathName="instruments"/>
         </Route>
         <Route exact path="/accessories">
-          <DisplayContainer displayData={accessories} pathName="accessories"/>
+          <DisplayContainer displayData={accessories}  handleCartAdd={handleCartAdd} pathName="accessories"/>
         </Route>
         <Route exact path="/albums">
-          <DisplayContainer displayData={albums} pathName="albums"/>
+          <DisplayContainer displayData={albums} handleCartAdd={handleCartAdd} pathName="albums"/>
         </Route>
         <Route>
           404 Page Does Not Exist

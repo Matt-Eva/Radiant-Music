@@ -79,7 +79,8 @@ body{
 
 .category-list{
   list-style-type: none;
-  padding: 0px 0px 0px 0px;
+  /* padding: 0px 0px 0px 0px; */
+  text-align: left;
 }
 
 .merch-display{

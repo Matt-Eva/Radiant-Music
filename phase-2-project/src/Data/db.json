@@ -6,7 +6,7 @@
       "price": 649.99,
       "type": "instruments",
       "category": "string",
-      "stock": 3,
+      "stock": 2,
       "image": "https://www.stars-music.com/medias/fender/strat-player-mex-sss-pf-hd-146087.jpg",
       "review": [],
       "rating": 0
@@ -17,7 +17,7 @@
       "price": 599.99,
       "type": "instruments",
       "category": "string",
-      "stock": 8,
+      "stock": 7,
       "image": "https://static.gibson.com/product-images/USA/USAS7F953/Sixties%20Cherry/front-banner-500_500.png",
       "review": [],
       "rating": 0
@@ -39,7 +39,7 @@
       "price": 119.99,
       "type": "instruments",
       "category": "string",
-      "stock": 12,
+      "stock": 11,
       "image": "https://media.sweetwater.com/api/i/f-webp__q-82__ha-5a949e05e80e837c__hmac-e6950ee26a7fb94c48b19c2c66c42558a854194e/images/items/750/15CM-large.jpg.auto.webp",
       "review": [],
       "rating": 0
@@ -197,7 +197,7 @@
       "title": "Vandoren Traditional Bb Clarinet Reeds - Box of 10",
       "price": 19.99,
       "type": "accessories",
-      "category": "wind",
+      "category": "wind gear",
       "stock": 18,
       "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSVsjEbvYMCYCWnGYuBgGBh3Is7duhT_KFm4nIQFnOxzmpigL4PmQC5KLvcv1LCM8XZs0fmZxrjiipks2-BxJiDmFFJ0iLnXIjkwtiA9vFVIKimwpQrYD43HA&usqp=CAE",
       "review": [],
@@ -208,8 +208,8 @@
       "title": "Padded Piano Bench",
       "price": 24.99,
       "type": "accessories",
-      "category": "keys",
-      "stock": 8,
+      "category": "keys gear",
+      "stock": 7,
       "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRhOYaSSphOeDRlNod7Pn7_SEm7SZeyV4i3RywqdRVFNHLfPo4ZhOqN92zd44X9Lkjz218QonExfmpdgSGymVFTBkyWD-U8Q4tVAyYz_Mme&usqp=CAE",
       "review": [],
       "rating": 0
@@ -219,7 +219,7 @@
       "title": "Al Cass Fast Valve Slide and Key Oil",
       "price": 4.99,
       "type": "accessories",
-      "category": "brass",
+      "category": "brass gear",
       "stock": 24,
       "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRpJbYSfFVz-KvxYTDxaI8SDLJn5uLQq861vgjewmwzKJFP1S4Hss7qF5Gldi7RPdzhaKoEwDz4dgDcLCT4r3pO1s0I5mPR3_iBhM4RKVBv8aH1RziPhWn2&usqp=CAE",
       "review": [],
@@ -230,7 +230,7 @@
       "title": "Hickory Drumsticks",
       "price": 9.99,
       "type": "accessories",
-      "category": "percussion",
+      "category": "percussion gear",
       "stock": 16,
       "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcSHvibagQTuB30__wJRr3RmEVrTdEEL2yq2KABmDGmyocKq4EX66hDqsuq36dTYSyH6AA9PsxZTvDhMhcH14qKU0UzGhMRByA71OvRQDDr4&usqp=CAE",
       "review": [],
@@ -289,7 +289,7 @@
       "image": "https://cdn.mos.cms.futurecdn.net/9LjTbX3VL2n5zUpMvSELMn.jpg",
       "review": [],
       "rating": 0,
-      "id": 27
+      "id": 26
     }
   ]
 }
