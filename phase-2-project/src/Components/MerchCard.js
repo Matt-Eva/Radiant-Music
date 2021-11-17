@@ -14,7 +14,7 @@ const MerchCard = ({item, handleCartAdd}) => {
         <div className="merchcard">
             <img src={image}/>
             <h4 style={{margin: "0px"}} title={title}>{title}</h4>
-            <p>$ {price}</p>
+            <p>${price}</p>
             <p>Number In Stock: {stock}</p>
             <button onClick={() => handleCartAdd(item)}>Add to Cart</button>
             <form>
