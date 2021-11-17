@@ -10,6 +10,7 @@ function App() {
   const baseUrl = "http://localhost:4000/resources";
   const [allData, setAllData] = useState([])
   const [cart, setCart] = useState([])
+  const [sort, setSort] = useState([])
   
   const instruments = allData.filter(data => data.type === "instruments")
   const accessories = allData.filter(data => data.type === "accessories")
@@ -69,23 +70,36 @@ function App() {
     })
 }
 
+const setSelected = (cat, bool) => {
+  if(bool){
+      setSort([...sort, cat])
+  } else {
+      const oneLess = sort.filter(element => element !== cat)
+      setSort(oneLess)
+  }
+}
+
+function emptySort() {
+  setSort([])
+}
+
   return (
     <div className="App">
       <Header cart={cart}/>
       <AddForm instruments={instruments} accessories={accessories} albums={albums} addMerch={addMerch}/>
-      <NavBar />
+      <NavBar emptySort={emptySort}/>
       <Switch>
         <Route exact path="/">
-          <DisplayContainer displayData={allData}  handleCartAdd={handleCartAdd} pathName="all merch"/>
+          <DisplayContainer displayData={allData}  handleCartAdd={handleCartAdd} sort={sort} setSelected={setSelected} pathName="all merch"/>
         </Route>
         <Route exact path="/instruments">
-          <DisplayContainer displayData={instruments}  handleCartAdd={handleCartAdd} pathName="instruments"/>
+          <DisplayContainer displayData={instruments}  handleCartAdd={handleCartAdd} sort={sort} setSelected={setSelected} pathName="instruments"/>
         </Route>
         <Route exact path="/accessories">
-          <DisplayContainer displayData={accessories}  handleCartAdd={handleCartAdd} pathName="accessories"/>
+          <DisplayContainer displayData={accessories}  handleCartAdd={handleCartAdd} sort={sort} setSelected={setSelected} pathName="accessories"/>
         </Route>
         <Route exact path="/albums">
-          <DisplayContainer displayData={albums} handleCartAdd={handleCartAdd} pathName="albums"/>
+          <DisplayContainer displayData={albums} handleCartAdd={handleCartAdd} sort={sort} setSelected={setSelected} pathName="albums"/>
         </Route>
         <Route>
           404 Page Does Not Exist

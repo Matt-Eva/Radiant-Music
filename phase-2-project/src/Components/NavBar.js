@@ -1,11 +1,11 @@
 import { NavLink } from "react-router-dom";
 
-const NavBar = () =>{
+const NavBar = ({emptySort}) =>{
     return (
         <div className="navbar">
-            <NavLink exact to="/instruments">Instruments</NavLink>
-            <NavLink exact to="/accessories">Accessories</NavLink>
-            <NavLink exact to="/albums">Albums</NavLink>
+            <NavLink exact to="/instruments" onClick={emptySort} >Instruments</NavLink>
+            <NavLink exact to="/accessories" onClick={emptySort} >Accessories</NavLink>
+            <NavLink exact to="/albums" onClick={emptySort} >Albums</NavLink>
         </div>
     )
 }
