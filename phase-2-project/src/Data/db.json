@@ -6,7 +6,7 @@
       "price": 649.99,
       "type": "instruments",
       "category": "string",
-      "stock": 0,
+      "stock": 1,
       "image": "https://www.stars-music.com/medias/fender/strat-player-mex-sss-pf-hd-146087.jpg",
       "review": [],
       "rating": 0
@@ -17,7 +17,7 @@
       "price": 599.99,
       "type": "instruments",
       "category": "string",
-      "stock": 4,
+      "stock": 6,
       "image": "https://static.gibson.com/product-images/USA/USAS7F953/Sixties%20Cherry/front-banner-500_500.png",
       "review": [],
       "rating": 0
@@ -279,17 +279,6 @@
       "image": "https://encrypted-tbn3.gstatic.com/shopping?q=tbn:ANd9GcS3z7PG1UI_xsSOkeYv535U5-L4fDU0L-3iIMsfODbWQwqCOq875NVc9DugfY_Fl9TyTEexVXRVE105_XRqnR9ckt6h5IJ_M3EId5Vy5qPJxxOJ75Tz_Hjs&usqp=CAE",
       "review": [],
       "rating": 0
-    },
-    {
-      "title": "Steel String Acoustic Guitar",
-      "price": 200,
-      "type": "instruments",
-      "category": "string",
-      "stock": 5,
-      "image": "https://cdn.mos.cms.futurecdn.net/9LjTbX3VL2n5zUpMvSELMn.jpg",
-      "review": [],
-      "rating": 0,
-      "id": 26
     }
   ]
 }
