@@ -6,7 +6,7 @@
       "price": 649.99,
       "type": "instruments",
       "category": "string",
-      "stock": 2,
+      "stock": 0,
       "image": "https://www.stars-music.com/medias/fender/strat-player-mex-sss-pf-hd-146087.jpg",
       "review": [],
       "rating": 0
@@ -17,7 +17,7 @@
       "price": 599.99,
       "type": "instruments",
       "category": "string",
-      "stock": 7,
+      "stock": 4,
       "image": "https://static.gibson.com/product-images/USA/USAS7F953/Sixties%20Cherry/front-banner-500_500.png",
       "review": [],
       "rating": 0
@@ -50,7 +50,7 @@
       "price": 299.99,
       "type": "instruments",
       "category": "string",
-      "stock": 10,
+      "stock": 9,
       "image": "https://media.guitarcenter.com/is/image/MMGS7/J08149000004000-00-720x720.jpg",
       "review": [],
       "rating": 0
@@ -61,7 +61,7 @@
       "price": 399.99,
       "type": "instruments",
       "category": "string",
-      "stock": 2,
+      "stock": 0,
       "image": "https://media.guitarcenter.com/is/image/MMGS7/J05663000003000-00-720x720.jpg",
       "review": [],
       "rating": 0

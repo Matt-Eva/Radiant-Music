@@ -22,7 +22,7 @@ const DisplayContainer = ({displayData, pathName, handleCartAdd, sort, setSelect
     return (
         <>
             <Search search={search} handleSearch={handleSearch} pathName={pathName}/>
-            <SideBar categories={categories} setSelected={setSelected} pathName={pathName}/>
+            <SideBar categories={categories} setSelected={setSelected} pathName={pathName} displayData={displayData}/>
             <MerchDisplay displayData={merch} sort={sort} handleCartAdd={handleCartAdd}/>
         </>
     )
