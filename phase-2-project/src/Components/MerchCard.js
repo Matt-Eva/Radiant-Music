@@ -1,14 +1,17 @@
+import { useState } from "react"
 
-
-const MerchCard = ({item, handleCartAdd}) => {
-    const {title, price, stock, image='https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_400,h_264/https://myfavoritetherapists.com/wp-content/themes/apexclinic/images/no-image/No-Image-Found-400x264.png'} = item
-
-    // function handleStockChange({item}){
-    //     const {type, stock, id} = item
-    //     fetch(baseUrl + `/${type}/${id}`)
-    // }
-        
+const MerchCard = ({item, handleCartAdd, handleAddStock, handleDelete}) => {
     
+    const [addStock, setAddStock] = useState('')
+    const [checked, setChecked] = useState(false)
+
+    const {title, price, stock, image, id} = item
+        
+    const handleSubmit = (e) => {
+        e.preventDefault()
+        setAddStock('')
+        handleAddStock(item, addStock)
+    }
 
     return (
         <div className="merchcard">
@@ -18,11 +21,12 @@ const MerchCard = ({item, handleCartAdd}) => {
             <p>${price}</p>
             <p>Number In Stock: {stock}</p>
             {stock === 0 ? <button disabled>Add to Cart</button> : <button onClick={() => handleCartAdd(item)}>Add to Cart</button>}
-            <form>
-                <label>Add Stock</label>
-                <input type="number" className="add-stock"/>
-                <button type="submit">Submit</button>
+            <form onSubmit={handleSubmit}>
+                <input type="number" className="add-stock" value={addStock} onChange={(e) => setAddStock(e.target.value)}/>
+                {addStock === '' ? <button disabled>Add Stock</button> : <button type="submit">Add Stock</button>}
             </form>
+            <input type = "checkbox" onChange={() => setChecked(!checked)} checked={checked}></input>
+            {checked ? <button onClick={() => handleDelete(id)}>Remove From Inventory</button> : <button disabled>Remove from Inventory</button>}
         </div>
     )
 }

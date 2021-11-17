@@ -78,6 +78,42 @@ function emptySort() {
   setSort([])
 }
 
+const handleAddStock = (item, value) => {
+    const numValue = parseInt(value)
+    item.stock += numValue
+
+    if(item.stock < 0){
+      item.stock = 0
+    }
+
+    const configObj = {
+      method: 'PATCH',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(item)
+    }
+
+    fetch(baseUrl + `/${item.id}`, configObj)
+    .then(res => res.json())
+    .then(data => {
+      const addedStock = allData.map(item => item.id === data.id ? data : item)
+      setAllData([...addedStock])
+    })
+}
+
+
+  const handleDelete = (id) => {
+    
+    fetch(baseUrl + `/${id}`, {
+      method: 'DELETE'
+    })
+    .then(() =>{
+      const deletedItemArray = allData.filter(item => item.id !== id)
+      setAllData([...deletedItemArray])
+    })
+  }
+
   return (
     <div className="App">
       <Header cart={cart}/>
@@ -85,16 +121,16 @@ function emptySort() {
       <NavBar emptySort={emptySort}/>
       <Switch>
         <Route exact path="/">
-          <DisplayContainer displayData={allData}  handleCartAdd={handleCartAdd} sort={sort} setSelected={setSelected} pathName="all merch"/>
+          <DisplayContainer displayData={allData} handleAddStock={handleAddStock} handleCartAdd={handleCartAdd} sort={sort} setSelected={setSelected} handleDelete={handleDelete} pathName="all merch"/>
         </Route>
         <Route exact path="/instruments">
-          <DisplayContainer displayData={instruments}  handleCartAdd={handleCartAdd} sort={sort} setSelected={setSelected} pathName="instruments"/>
+          <DisplayContainer displayData={instruments} handleAddStock={handleAddStock} handleCartAdd={handleCartAdd} sort={sort} setSelected={setSelected} handleDelete={handleDelete} pathName="instruments"/>
         </Route>
         <Route exact path="/accessories">
-          <DisplayContainer displayData={accessories}  handleCartAdd={handleCartAdd} sort={sort} setSelected={setSelected} pathName="accessories"/>
+          <DisplayContainer displayData={accessories} handleAddStock={handleAddStock} handleCartAdd={handleCartAdd} sort={sort} setSelected={setSelected} handleDelete={handleDelete} pathName="accessories"/>
         </Route>
         <Route exact path="/albums">
-          <DisplayContainer displayData={albums} handleCartAdd={handleCartAdd} sort={sort} setSelected={setSelected} pathName="albums"/>
+          <DisplayContainer displayData={albums} handleAddStock={handleAddStock} handleCartAdd={handleCartAdd} sort={sort} setSelected={setSelected} handleDelete={handleDelete} pathName="albums"/>
         </Route>
         <Route>
           404 Page Does Not Exist
