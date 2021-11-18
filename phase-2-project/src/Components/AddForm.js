@@ -1,4 +1,5 @@
-import { useState } from "react"
+import { useState } from "react";
+import styled from "styled-components";
 
 const AddForm = ({instruments, accessories, albums, addMerch}) =>{
     const instOptions = [...new Set(instruments.map(item => item.category))].map(cat => <option key={cat} value={cat}>{titleCase(cat)}</option>)
@@ -81,7 +82,7 @@ const AddForm = ({instruments, accessories, albums, addMerch}) =>{
     }
 
     return (
-        <div className="addform">
+        <FormDiv>
             <h3>Add Item:</h3>
             <form onChange={handleChange} onSubmit={(e) =>{
                 addMerch(formData)
@@ -110,8 +111,25 @@ const AddForm = ({instruments, accessories, albums, addMerch}) =>{
                 {fill ? <button type="submit">Submit</button> : <button type="submit" disabled>Submit</button>}
                 
             </form>
-        </div>
+        </FormDiv>
     )
 }
 
 export default AddForm;
+
+const FormDiv = styled.div`
+
+    margin: 20px 250px 20px 250px;
+    padding: 5px 5px 5px 5px;
+    border: solid;
+    border-width: 1px;
+
+    select {
+        margin: 0px 10px 0px 3px;
+    }
+
+    input{
+        margin: 0px 10px 0px 3px;
+    }
+
+`

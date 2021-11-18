@@ -8,7 +8,7 @@ body button{
   cursor: pointer;
 }
 
-.header{
+.header {
   background-color: hsl(210, 50%, 20%);
   color: hsl(30, 100%, 80%);
   margin: 0px;
