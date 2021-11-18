@@ -1,4 +1,5 @@
 import ListItem from "./ListItem"
+import styled from "styled-components";
 
 
 const SideBar = ({ categories, setSelected, pathName, displayData }) =>{
@@ -20,7 +21,7 @@ const SideBar = ({ categories, setSelected, pathName, displayData }) =>{
       
 
         return(
-        <div className="sidebar">
+        <SideDiv>
             <h3>Sort By:</h3>
             <h4>Instruments:</h4>
                 <ul className="category-list">
@@ -34,7 +35,7 @@ const SideBar = ({ categories, setSelected, pathName, displayData }) =>{
                 <ul className="category-list">
                     {albumList}
             </ul>
-        </div>
+        </SideDiv>
         )
 
     } else {
@@ -42,14 +43,42 @@ const SideBar = ({ categories, setSelected, pathName, displayData }) =>{
         const displayCategories = categories.map(cat => <ListItem key={cat} category={cat} setSelected={setSelected}/>)
 
     return (
-        <div className="sidebar">
+        <SideDiv>
             <h3>Sort By:</h3>
             <ul className="category-list">
                 {displayCategories}
             </ul>
-        </div>
+        </SideDiv>
     )
     }
 }
 
 export default SideBar;
+
+const SideDiv = styled.div`
+
+  position: sticky;
+  top: 5px;
+  margin: 0px 20px 0px 10px;
+  float: left;
+  width: 200px;
+  background: hsl(0, 0%, 90%);
+  border: solid;
+  border-width: 1px;
+  border-radius: 5px; 
+  height: 800px;  
+
+  h4{
+    text-align: left;
+    margin: 10px 0px 5px 20px;
+    text-decoration: underline;
+  }
+
+  ul {
+    list-style-type: none;
+    text-align: left;
+    margin: 0px;
+    padding-left: 25px;
+  }
+
+`

@@ -1,10 +1,8 @@
 import MerchCard from "./MerchCard";
-// import { useState } from "react";
+import styled from "styled-components"
 
 
 const MerchDisplay = ({displayData, sort, handleCartAdd, handleAddStock, handleDelete}) =>{
-
-   
 
     let merchItems
 
@@ -25,10 +23,29 @@ const MerchDisplay = ({displayData, sort, handleCartAdd, handleAddStock, handleD
 
 
     return (
-        <div className="merch-display">
+        <DisplayDiv>
             {merchItems}
-        </div>
+        </DisplayDiv>
     )
 }
 
 export default MerchDisplay;
+
+const DisplayDiv = styled.div `
+
+  margin: 0px 10px 10px 230px;
+  padding: 10px 10px 10px 10px;
+  display: flex;
+  flex-wrap: wrap;
+  /* width: 800px; */
+  background-color: hsl(0, 0%, 95%);
+  border-radius: 5px;   
+  border: double;
+  border-width: 4px;
+
+  div:hover {
+    background-color: hsl(210, 50%, 95%);
+  border-color: hsl(180, 50%, 20%);
+  }
+
+`

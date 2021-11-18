@@ -5,6 +5,8 @@ import Header from "./Header"
 import AddForm from './AddForm';
 import NavBar from './NavBar';
 import DisplayContainer from './DisplayContainer';
+import styled from "styled-components";
+import { ThemeProvider } from "styled-components"
 
 function App() {
   const baseUrl = "http://localhost:4000/resources";
@@ -115,7 +117,8 @@ const handleAddStock = (item, value) => {
   }
 
   return (
-    <div className="App">
+    <ThemeProvider theme={theme}>
+    <AppBody>
       <Header cart={cart}/>
       <AddForm instruments={instruments} accessories={accessories} albums={albums} addMerch={addMerch}/>
       <NavBar emptySort={emptySort}/>
@@ -136,8 +139,26 @@ const handleAddStock = (item, value) => {
           404 Page Does Not Exist
         </Route>
       </Switch>
-    </div>
+    </AppBody>
+    </ThemeProvider>
   );
 }
 
 export default App;
+
+const AppBody = styled.div`
+
+      font-family: Verdana;
+      text-align: center;
+      cursor: pointer;
+
+`
+
+const theme={
+  color: {
+    headers: "hsl(30, 100%, 80%)"
+  },
+  backgroundColor: {
+    headers: "hsl(210, 50%, 20%)"
+  }
+}
