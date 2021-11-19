@@ -16,12 +16,12 @@ const MerchCard = ({item, handleCartAdd, handleAddStock, handleDelete}) => {
 
     return (
         <CardDiv>
-            {stock === 0 ? <OutStockP>OUT OF STOCK</OutStockP> : null}
+            {/* {stock === 0 ? <OutStockP>OUT OF STOCK</OutStockP> : null} */}
             <img src={image} alt={title}/>
             <h4 style={{margin: "0px"}} title={title}>{title}</h4>
             <p>${price}</p>
             <p>Number In Stock: {stock}</p>
-            {stock === 0 ? <button disabled>Add to Cart</button> : <button onClick={() => handleCartAdd(item)}>Add to Cart</button>}
+            {stock === 0 ? <OutStockP>OUT OF STOCK</OutStockP> : <button onClick={() => handleCartAdd(item)}>Add to Cart</button>}
             <form onSubmit={handleSubmit}>
                 <StockInput type="number" value={addStock} onChange={(e) => setAddStock(e.target.value)}/>
                 {addStock === '' ? <button disabled>Add Stock</button> : <button type="submit">Add Stock</button>}
@@ -47,6 +47,8 @@ const CardDiv = styled.div`
   background-color: hsl(0, 0%, 98%);
   transition: background-color 500ms, border-color 500ms;
   box-shadow: 3px 3px 4px hsl(0, 0%, 85%);
+  z-index: 0;
+  // text-align: center;
 
   button{
       margin: 5px 2px 5px 2px;
@@ -70,12 +72,14 @@ width: 40px;
 `
 
 const OutStockP = styled.p`
+background-color: red;
 
-z-index: 0;
 
-position: absolute;
- margin-top: 3%;
-  margin-left: 3%;
-   background-color: red;
+
+margin: 0%, 200px, 0%, 0px;
+// width: 200px;
+//    background-color: red;
+
+// text-align: center;
 
 `
