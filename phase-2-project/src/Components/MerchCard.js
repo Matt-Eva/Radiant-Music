@@ -39,7 +39,7 @@ const CardDiv = styled.div`
   margin: 10px 2.5% 10px 2.5%;
   padding: 5px 5px 5px 5px;
   width: calc(20% - 10px);
-  height: 300px;
+  min-height: 300px;
   /* border: solid;
   border-width: 1px; */
   border-radius: 5px;
@@ -47,6 +47,7 @@ const CardDiv = styled.div`
   background-color: hsl(0, 0%, 98%);
   transition: background-color 500ms, border-color 500ms;
   box-shadow: 3px 3px 4px hsl(0, 0%, 85%);
+  position: relative;
 
   button{
       margin: 5px 2px 5px 2px;
@@ -74,8 +75,9 @@ const OutStockP = styled.p`
 z-index: 0;
 
 position: absolute;
- margin-top: 3%;
-  margin-left: 3%;
-   background-color: red;
+top: 12%;
+right: 25%;
+left: 25%;
+background-color: red;
 
 `
