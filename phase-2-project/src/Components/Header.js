@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
 
-const Header = ({cart}) =>{
+const Header = ({cart, toggleCart}) =>{
 
 
     return (
@@ -9,7 +9,7 @@ const Header = ({cart}) =>{
         <h1>
             <Link to="/" > Radiant Music</Link>
         </h1>
-        <p>🛒: {cart.length} items in cart</p>
+        <p onClick={toggleCart}>🛒: {cart.length} items in cart</p>
         <br/>
         </TopHead>
     )

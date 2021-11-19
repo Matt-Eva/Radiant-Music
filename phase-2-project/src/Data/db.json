@@ -6,10 +6,11 @@
       "price": 649.99,
       "type": "instruments",
       "category": "string",
-      "stock": 0,
+      "stock": 2,
       "image": "https://www.stars-music.com/medias/fender/strat-player-mex-sss-pf-hd-146087.jpg",
       "review": [],
-      "rating": 0
+      "rating": 0,
+      "count": 2
     },
     {
       "id": 2,
@@ -17,7 +18,7 @@
       "price": 599.99,
       "type": "instruments",
       "category": "string",
-      "stock": 6,
+      "stock": 1,
       "image": "https://static.gibson.com/product-images/USA/USAS7F953/Sixties%20Cherry/front-banner-500_500.png",
       "review": [],
       "rating": 0
@@ -28,10 +29,11 @@
       "price": 229.99,
       "type": "instruments",
       "category": "string",
-      "stock": 4,
+      "stock": 3,
       "image": "https://cdn.mos.cms.futurecdn.net/9LjTbX3VL2n5zUpMvSELMn.jpg",
       "review": [],
-      "rating": 0
+      "rating": 0,
+      "count": 1
     },
     {
       "id": 4,
@@ -39,10 +41,11 @@
       "price": 119.99,
       "type": "instruments",
       "category": "string",
-      "stock": 11,
+      "stock": 8,
       "image": "https://media.sweetwater.com/api/i/f-webp__q-82__ha-5a949e05e80e837c__hmac-e6950ee26a7fb94c48b19c2c66c42558a854194e/images/items/750/15CM-large.jpg.auto.webp",
       "review": [],
-      "rating": 0
+      "rating": 0,
+      "count": 10
     },
     {
       "id": 5,
@@ -50,10 +53,11 @@
       "price": 299.99,
       "type": "instruments",
       "category": "string",
-      "stock": 9,
+      "stock": 5,
       "image": "https://media.guitarcenter.com/is/image/MMGS7/J08149000004000-00-720x720.jpg",
       "review": [],
-      "rating": 0
+      "rating": 0,
+      "count": 5
     },
     {
       "id": 6,
@@ -72,7 +76,7 @@
       "price": 249.99,
       "type": "instruments",
       "category": "string",
-      "stock": 5,
+      "stock": 4,
       "image": "https://media.guitarcenter.com/is/image/MMGS7/J03684000001001-02-720x720.jpg",
       "review": [],
       "rating": 0
@@ -86,7 +90,8 @@
       "stock": 4,
       "image": "https://encrypted-tbn2.gstatic.com/shopping?q=tbn:ANd9GcTqpTv2f6WH6DwAwSo66npnn4YxlGlScFE1HWZZz3HpRdCZhoBaEn9jpidi01NreoyVtD9jP7qpQ4rw4InpdP5VcnZOkAhQPVnCOsmnhHMb&usqp=CAE",
       "review": [],
-      "rating": 0
+      "rating": 0,
+      "count": 6
     },
     {
       "id": 9,
@@ -116,7 +121,7 @@
       "price": 699.99,
       "type": "instruments",
       "category": "percussion",
-      "stock": 3,
+      "stock": 2,
       "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcSOD7XCNmlPaRmH5eWJdmAl4QAjbIq4xmqt5hAyWUmIsH5UmkmTeHlakCYRVAv3mgSRXqIKwfzuB3PoLbjy2U7q5dm3osHI_2A7UJ9F-DP0kYS9nMj3BMLr&usqp=CAE",
       "review": [],
       "rating": 0
@@ -127,7 +132,7 @@
       "price": 259.99,
       "type": "instruments",
       "category": "keys",
-      "stock": 6,
+      "stock": 5,
       "image": "https://encrypted-tbn1.gstatic.com/shopping?q=tbn:ANd9GcQDQ0whpJqPN-uwXlmFLpCyXBi472AYZLWEqAQ627-hSF4S9e-dMINsUFUcjbfOhoAnCJ8Bq0j_aICBFMK87FgVEzRE6vV7uVe4Zdau4FQqLmJTgjQFBLCQ&usqp=CAE",
       "review": [],
       "rating": 0
@@ -162,7 +167,7 @@
       "price": 24.99,
       "type": "albums",
       "category": "jazz",
-      "stock": 12,
+      "stock": 11,
       "image": "https://i.guim.co.uk/img/media/0f5a2d6ea401b7281fc050a8bbd57da6b5e18e5f/0_0_3556_3556/master/3556.jpg?width=700&quality=85&auto=format&fit=max&s=4be63bd5ea4dae601ed124031f90e434",
       "review": [],
       "rating": 0,
@@ -220,7 +225,7 @@
       "price": 4.99,
       "type": "accessories",
       "category": "brass gear",
-      "stock": 24,
+      "stock": 23,
       "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcRpJbYSfFVz-KvxYTDxaI8SDLJn5uLQq861vgjewmwzKJFP1S4Hss7qF5Gldi7RPdzhaKoEwDz4dgDcLCT4r3pO1s0I5mPR3_iBhM4RKVBv8aH1RziPhWn2&usqp=CAE",
       "review": [],
       "rating": 0
@@ -242,7 +247,7 @@
       "price": 3.99,
       "type": "accessories",
       "category": "guitars",
-      "stock": 19,
+      "stock": 18,
       "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQLZoRDEkqobD4FIiT4wG4T56krhG12o-0FZ0yGkF-aEnhrDGKHtu6UJv7rGebhJun24egGckbJ3TIZEI4l3QbQqXTYR2oOAazFjVZ0fCSY&usqp=CAE",
       "review": [],
       "rating": 0
