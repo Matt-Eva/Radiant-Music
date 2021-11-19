@@ -17,7 +17,8 @@ const NavDiv = styled.div`
 
 background-color: ${props => props.theme.backgroundColor.headers};
 
-margin: 10px 0px 10px 0px;
+margin: 10px 20% 10px 20%;
+border-radius: 5px;
 
 a {
   margin: 0px 10px 0px 10px;

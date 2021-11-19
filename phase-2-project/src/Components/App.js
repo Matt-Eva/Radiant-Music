@@ -4,6 +4,7 @@ import '../App.css';
 import Header from "./Header"
 import AddForm from './AddForm';
 import NavBar from './NavBar';
+import CartPopup from "./CartPopup";
 import DisplayContainer from './DisplayContainer';
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components"
@@ -13,6 +14,10 @@ function App() {
   const [allData, setAllData] = useState([])
   const [cart, setCart] = useState([])
   const [sort, setSort] = useState([])
+  const [showCart, setShowCart] = useState(false)
+  const [count, setCount] = useState(0)
+
+  // console.log(cart)
   
   const instruments = allData.filter(data => data.type === "instruments")
   const accessories = allData.filter(data => data.type === "accessories")
@@ -62,9 +67,37 @@ function App() {
     .then(data =>{
       const updatedArray = allData.map(item => item.id === data.id ? data : item)
       setAllData([...updatedArray])
-      setCart([...cart, data])
+      const cartItem = {...data, count: count}
+      setCart([...cart, cartItem])
+      setCount(count => count + 1)
       alert(`${item.title} added to cart! :)`)
     })
+}
+
+const removeFromCart = (item) =>{
+  const inStockItem = allData.filter(merch => merch.id === item.id )
+
+  const newStock ={
+    stock: [...inStockItem][0].stock + 1
+  }
+  
+  const configObj = {
+    method: 'PATCH',
+    headers: {
+        'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(newStock)
+}
+
+fetch(baseUrl + `/${item.id}`, configObj)
+.then(res => res.json())
+.then(data =>{
+  const updatedArray = allData.map(item => item.id === data.id ? data : item)
+  setAllData([...updatedArray])
+
+  const smallCart = cart.filter(thing => thing.count !== item.count)
+  setCart([...smallCart])
+})
 }
 
 const setSelected = (cat, bool) => {
@@ -116,10 +149,15 @@ const handleAddStock = (item, value) => {
     })
   }
 
+  function toggleCart(){
+    setShowCart(showCart => !showCart)
+  }
+
   return (
     <ThemeProvider theme={theme}>
+    {showCart && <CartPopup toggleCart={toggleCart} cart={cart} removeFromCart={removeFromCart}/>}
     <AppBody>
-      <Header cart={cart}/>
+      <Header cart={cart} toggleCart={toggleCart}/>
       <AddForm instruments={instruments} accessories={accessories} albums={albums} addMerch={addMerch}/>
       <NavBar emptySort={emptySort}/>
       <Switch>
@@ -150,8 +188,12 @@ const AppBody = styled.div`
 
       font-family: Verdana;
       text-align: center;
-      cursor: pointer;
 
+
+
+      button {
+        cursor: pointer;
+      }
 `
 
 const theme={

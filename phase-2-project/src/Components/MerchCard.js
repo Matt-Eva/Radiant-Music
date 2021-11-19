@@ -16,7 +16,7 @@ const MerchCard = ({item, handleCartAdd, handleAddStock, handleDelete}) => {
 
     return (
         <CardDiv>
-            {stock === 0 ? <p style={{position: "absolute", marginTop: "3%", marginLeft: "3%", backgroundColor: "red"}}>OUT OF STOCK</p> : null}
+            {stock === 0 ? <OutStockP>OUT OF STOCK</OutStockP> : null}
             <img src={image} alt={title}/>
             <h4 style={{margin: "0px"}} title={title}>{title}</h4>
             <p>${price}</p>
@@ -67,4 +67,15 @@ img{
 
 const StockInput = styled.input`
 width: 40px;
+`
+
+const OutStockP = styled.p`
+
+z-index: 0;
+
+position: absolute;
+ margin-top: 3%;
+  margin-left: 3%;
+   background-color: red;
+
 `

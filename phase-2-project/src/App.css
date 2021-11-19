@@ -4,9 +4,7 @@ body{
   text-align: center;
 }
 
-body button{
-  cursor: pointer;
-}
+
 
 .header {
   background-color: hsl(210, 50%, 20%);
