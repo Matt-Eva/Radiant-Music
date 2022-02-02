@@ -4,6 +4,14 @@ Radiant Music is a frontend e-commerce application for all things music related.
 
 Radiant Music is the culmination of our 2nd phase in Flatiron School's Software Engineering program. You can learn more about us below.
 
+## Launch
+
+To run Radiant Music locally, you'll need to use json-server.
+
+If you don't already have json-server installed, you can install it by running `npm install -g json-server`.
+
+Then, run `json-server watch --db.json` to mimic API functionality.
+
 ## Created By
 
 #### Matt Eva 
