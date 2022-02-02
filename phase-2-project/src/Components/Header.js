@@ -9,7 +9,7 @@ const Header = ({cart, toggleCart}) =>{
         <h1>
             <Link to="/" > Radiant Music</Link>
         </h1>
-        <p onClick={toggleCart}>🛒: {cart.length} items in cart</p>
+        <p onClick={toggleCart} className="cart">🛒: {cart.length} items in cart</p>
         <br/>
         </TopHead>
     )
@@ -35,6 +35,10 @@ const TopHead = styled.div`
     h1{
         margin: 0px;
         padding: 10px 0px 10px 0px;
+    }
+
+    .cart{
+        cursor: pointer;
     }
 
 `

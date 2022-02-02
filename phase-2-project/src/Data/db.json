@@ -18,7 +18,7 @@
       "price": 599.99,
       "type": "instruments",
       "category": "string",
-      "stock": 1,
+      "stock": 0,
       "image": "https://static.gibson.com/product-images/USA/USAS7F953/Sixties%20Cherry/front-banner-500_500.png",
       "review": [],
       "rating": 0
@@ -41,7 +41,7 @@
       "price": 119.99,
       "type": "instruments",
       "category": "string",
-      "stock": 8,
+      "stock": 7,
       "image": "https://media.sweetwater.com/api/i/f-webp__q-82__ha-5a949e05e80e837c__hmac-e6950ee26a7fb94c48b19c2c66c42558a854194e/images/items/750/15CM-large.jpg.auto.webp",
       "review": [],
       "rating": 0,
@@ -65,7 +65,7 @@
       "price": 399.99,
       "type": "instruments",
       "category": "string",
-      "stock": 1,
+      "stock": 0,
       "image": "https://media.guitarcenter.com/is/image/MMGS7/J05663000003000-00-720x720.jpg",
       "review": [],
       "rating": 0
@@ -247,7 +247,7 @@
       "price": 3.99,
       "type": "accessories",
       "category": "guitars",
-      "stock": 18,
+      "stock": 17,
       "image": "https://encrypted-tbn0.gstatic.com/shopping?q=tbn:ANd9GcQLZoRDEkqobD4FIiT4wG4T56krhG12o-0FZ0yGkF-aEnhrDGKHtu6UJv7rGebhJun24egGckbJ3TIZEI4l3QbQqXTYR2oOAazFjVZ0fCSY&usqp=CAE",
       "review": [],
       "rating": 0
