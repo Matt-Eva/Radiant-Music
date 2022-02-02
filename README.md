@@ -1,6 +1,6 @@
 # Radiant Music
 
-Radiant Music is a frontend e-commerce application for shopping all things music related. It was built using React and custom CSS.
+Radiant Music is a frontend e-commerce application for all things music related. It was built using React and custom CSS.
 
 Radiant Music is the culmination of our 2nd phase in Flatiron School's Software Engineering program. You can learn more about us below.
 
