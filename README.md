@@ -21,7 +21,7 @@ Once you've started your json-server, you can run `npm start` to launch the Reac
 - Video Demo
 - Snapshot:
 
-
+<img width="1792" alt="Screen Shot 2022-02-03 at 1 52 42 PM" src="https://user-images.githubusercontent.com/89106805/152435395-1266a087-e15a-407e-96f5-a1f90165199f.png">
 
 ## Created By
 
