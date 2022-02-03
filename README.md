@@ -10,11 +10,18 @@ To run Radiant Music locally, you'll need to use json-server.
 
 If you don't already have json-server installed, you can install it by running `npm install -g json-server`.
 
-Then, run `json-server watch --db.json --port 4000` to mimic API functionality.
+Then, navigate to the Data directory within the src directory and run `json-server watch --db.json --port 4000` to mimic API functionality.
 
 Note: the current setup is configured to work with port 4000 specifically. Running your json-server on a different port will cause an error.
 
-Once you've started your json-server, you can run npm start to launch the React app.
+Once you've started your json-server, you can run `npm start` to launch the React app.
+
+## Walkthrough
+
+- Video Demo
+- Snapshot:
+
+
 
 ## Created By
 
