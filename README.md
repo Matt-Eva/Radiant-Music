@@ -35,4 +35,5 @@ Once you've started your json-server, you can run `npm start` within the "phase-
 
 #### Mike Neis
 - GitHub: https://github.com/michael-neis
-- LinkedIn: https://www.linkedin.com/in/michael-neis-740110201/
+- LinkedIn: https://www.linkedin.com/in/michael-neis
+- Email: michael.neis12@gmail.com
